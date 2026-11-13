@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f9f7f2">
+<title>摸氟摸氟</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+  <section class="stage" id="stage" aria-label="可以互动的狐耳少女">
+    <svg id="scene" class="scene" viewBox="0 0 1300 1100" role="img" aria-label="摸氟摸氟" aria-describedby="art-desc" xmlns="http://www.w3.org/2000/svg">
+      <desc id="art-desc">金色狐耳，奶油与粉色的头发，绿色衣袖搭在藤篮上，身旁是一条蓬松的大尾巴。她会呼吸、眨眼，并轻轻跟随你的视线。</desc>
+      <defs>
+        <!-- All artwork below consists of editable vector paths. No raster image is used. -->
+        <linearGradient id="hair-tone" gradientUnits="userSpaceOnUse" x1="820" y1="363" x2="800" y2="421"><stop offset="0.499" stop-color="#ffebc1"/><stop offset="0.501" stop-color="#eab0b5"/></linearGradient>
+        <linearGradient id="tail-light" gradientUnits="userSpaceOnUse" x1="290" y1="660" x2="379" y2="453"><stop stop-color="#ffebc2"/><stop offset=".6" stop-color="#fff0d4"/><stop offset="1" stop-color="#fffdf5"/></linearGradient>
+        <linearGradient id="face-light" x1="0" y1="1" x2=".6" y2="0"><stop stop-color="#ffe5d8"/><stop offset=".7" stop-color="#ffebdf"/><stop offset="1" stop-color="#fff8e9"/></linearGradient>
+        <linearGradient id="eye-white" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#bda5ab"/><stop offset=".26" stop-color="#fffdf9"/></linearGradient>
+        <radialGradient id="blush"><stop stop-color="#ff9e9b" stop-opacity=".5"/><stop offset="1" stop-color="#ff9e9b" stop-opacity="0"/></radialGradient>
+        <clipPath id="eye-clip"><path d="M-36 0Q0-4 36 1L36 39Q31 73 8 76Q-25 80-30 52Z"/></clipPath>
+        <clipPath id="eye-aperture-left" clipPathUnits="userSpaceOnUse"><path id="aperture-left" d="M-39-1Q0 1 39 1L60 112H-60Z"/></clipPath>
+        <clipPath id="eye-aperture-right" clipPathUnits="userSpaceOnUse"><path id="aperture-right" d="M-39-1Q0 1 39 1L60 112H-60Z"/></clipPath>
+        <path id="left-lock-contour" d="M780 250C726 264 679 309 645 363C620 404 603 424 578 440Q607 456 650 444L659 559C693 549 718 525 730 495L719 488C706 478 702 467 719 451L730 406C740 367 738 330 751 299"/>
+      </defs>
+      <!-- Rear basket and the recessed inner surface. -->
+      <g id="basket-back">
+        <path class="ink" fill="#b78e7e" d="M81 674C125 642 211 640 308 632C409 614 498 610 561 624C717 619 916 637 996 691L990 749C815 790 358 793 149 749L83 716Q77 696 81 674Z"/>
+        <path fill="#8e5e55" d="M111 687C223 647 410 632 555 650C723 646 887 659 976 704C799 748 297 757 111 687Z"/>
+        <path class="fine" d="m478 633 4 22m12-22 1 16m15-18-3 20m-44 10 63-2M107 686l15 7m-1-31 5 23m9-24 5 18"/>
+        <!-- The round cushion belongs to the stationary basket, behind the tail and body. -->
+        <g id="basket-cushion">
+          <circle class="ink" cx="522" cy="740" r="74" fill="#c37590"/>
+          <path d="M477 700Q499 679 526 681" fill="none" stroke="#dd98ae" stroke-width="4" stroke-linecap="round"/>
+        </g>
+      </g>
+
+      <!-- The tail stays behind the basket; its hit area shares the same vector silhouette. -->
+      <g id="tail">
+        <path id="tail-silhouette" class="ink" fill="url(#tail-light)" d="M182 795C156 751 149 681 161 624C173 567 216 523 269 494C311 471 350 460 388 457L378 464C405 459 431 456 454 457L460 461L457 467L466 467C448 487 442 526 446 557C449 598 466 628 482 665C494 691 498 709 495 728L503 799C397 817 271 812 182 795Z"/>
+        <path fill="#ebb0b5" d="M235 516C190 574 189 624 210 671Q218 659 225 680L253 798Q216 807 182 795C156 751 149 681 161 624C173 578 201 542 235 516Z"/>
+        <path fill="#fff7e4" d="M271 497C317 473 353 464 387 462Q359 478 332 489C293 506 273 526 257 540Q253 521 271 497Z" opacity=".6"/>
+        <g class="fur"><path d="m234 582-1 18m11-2-2 14m8 29 1 10m43-22 4 18m9-7 1 9m12-12 3 10m59-51 3 16m12-8 3 12m-29 69q2 9 7 13m11-13 3 10"/></g>
+        <use id="tail-hit" class="character-hit" href="#tail-silhouette" opacity="0" role="button" tabindex="0" aria-label="尾巴：按住上方下压，按住左右边缘反向躲避，松开复原，点击中间抖动"/>
+      </g>
+
+      <!-- Torso and the arm inside the basket. -->
+      <g id="body">
+        <path class="ink" fill="#899e35" d="M640 586L709 539Q734 517 760 516L905 554C954 569 986 604 1007 660Q1022 692 1018 714L969 760L555 767C530 706 583 622 640 586Z"/>
+        <path fill="#718633" d="M690 614Q708 653 690 687L647 731L545 751L553 714Q599 642 690 614Z"/>
+        <path class="fine" d="m643 638 48-80m-3 67-28 38m244-11 22-23m-23 22 7-7"/>
+        <path class="ink" fill="#e7b347" d="M728 535C720 546 710 570 705 584Q699 596 712 603L768 623Q830 663 858 634L884 607L765 574Z"/>
+        <path class="ink" fill="#e7b347" d="M750 613Q736 621 731 639Q725 652 747 661L773 670L788 640Z"/>
+        <path class="ink" fill="#e8b64d" d="M731 648Q699 676 655 731L742 736L771 667Z"/>
+        <path fill="#c9953d" d="m731 659-62 71 18 0 63-65Z"/>
+        <path class="ink" fill="#fff9e7" d="M726 528L743 518C777 541 847 562 918 552L909 591C868 603 814 621 769 618C742 586 735 557 726 528Z"/>
+        <path fill="#8e3c63" d="M734 525L742 521C747 559 755 585 770 606L907 578L906 586C863 594 816 615 768 613C745 584 739 551 734 525Z"/>
+        <path fill="#dbb4a4" d="M751 541Q814 585 914 563L912 575Q822 589 759 563Z"/>
+        <path class="fine" d="M770 615Q798 591 833 578"/>
+        <path class="ink" fill="#899e35" d="M640 582C629 566 612 575 598 582C561 601 537 628 529 656C521 676 516 705 524 726L613 739C651 718 669 684 657 636Q651 598 640 582Z"/>
+        <path fill="#7d9233" d="M529 658Q519 697 531 724L546 724Q537 687 548 642Z"/>
+        <path class="ink" fill="#fffbea" d="M546 723C566 700 595 684 613 683Q627 680 632 698L636 721L621 736Z"/>
+        <path fill="none" stroke="#9c3b62" stroke-width="5" d="M559 724Q590 695 615 695Q621 695 626 714"/>
+      </g>
+
+      <!-- Front basket covers the body's lower edge, as in the reference. -->
+      <g id="basket-front">
+        <path class="ink" fill="#bda090" d="M104 731C126 811 168 925 237 961C399 995 652 1008 867 947C925 889 970 809 991 744L774 723L349 732Z"/>
+        <path fill="#a77c6d" d="M750 760C724 853 651 919 572 988C670 988 779 974 865 947C924 883 970 806 990 744Z"/>
+        <path fill="#b18c79" d="M108 741Q131 821 165 878C156 829 148 798 146 754Z"/>
+        <g class="weave">
+          <path d="M139 767q21 9 43 9m-32 15q16 5 35 1m-26 23q13 5 24 1m-28 15q16 8 33 3m-8-67 5 18m4 21q5 36 14 52M198 779q16 3 31 0m-33 17q15 3 34 1m-21 14 22 0m-17 22 15 1m7-50q3 42 12 67"/>
+          <path d="M373 801q26 5 44 0m-28 16q15 2 27-2m-28 15q16 3 29-1M309 893q21 2 36 0m-29 17q15 4 33 1m-25 14q15 4 26 0m-10-61q4 49 17 73q14 17 20 28m-30-98q9 4 15 0m-16 13q9 6 20 0"/>
+          <path d="M687 824q1 58-15 86m15-81q21 5 41 2m-31 18q21 3 35-1m-37 19 39-3m-39 18 40-5m-111 10q24 4 53 2m-36 17 28-2m-12 17 14-1m-18 25-5 11M745 877q-14 40-25 59m-5 9-16 28"/>
+          <path d="M919 775q1 24-7 43m6-37q26 5 57-1m-51 28q17 3 33 0m-35 20q17 3 26 0m-53 32q18 3 31-1m-24 14q14 4 23-1m-28-6-2 10m-14 29-9 16m26-18 15-2"/>
+          <path d="m177 870 26 1m-6 17 9-1m6-9 5 10m-44 14 17 4m-10 7 16 4m68-33 .2 0m446-100 22 5m-13 14 12 2" stroke-width="2.5"/>
+        </g>
+        <path class="ink" fill="#bda090" d="M81 675C97 678 121 696 152 706C213 724 353 726 462 726C574 727 684 723 749 719C845 712 937 703 996 698L991 744C901 764 785 776 672 777C489 781 271 773 149 748C119 741 97 730 83 717Q77 700 81 675Z"/>
+        <path fill="#a57a69" d="M454 776Q535 787 662 779L725 775L726 768Q594 779 454 773Z"/>
+        <path class="weave" d="M125 706q-1 22 7 31m19-24q-1 21 7 31m13-16q0 14 5 19m78-22q-1 23 8 37m20-24 1 23m110-34q0 18 7 33m8-24q-1 17 6 28m204-27 1 31m17-28-1 28m84-40-1 26m14-28-3 22m70-28-5 27m47-32-6 27"/>
+      </g>
+
+      <!-- Sleeve and striped cuff hang in front of the rim. -->
+      <g id="sleeve">
+        <path class="ink" fill="#fff9e8" d="M750 825Q818 851 885 826L879 853Q863 875 834 886Q792 883 759 868C749 858 748 841 750 825Z"/>
+        <path fill="#dcb8a4" d="m849 851-22 32 10-1q24-11 41-29l6-24Z"/>
+        <path fill="none" stroke="#953550" stroke-width="7" d="M752 845Q815 871 881 842"/>
+        <path class="ink" fill="#899e35" d="M950 585C982 603 1007 650 1019 688C1028 709 1017 731 1002 741C974 759 937 758 903 751Q910 781 904 809C890 828 866 840 841 844C803 851 762 845 746 833C732 826 728 818 731 796C738 740 752 697 783 678C828 656 871 647 912 654Q929 631 916 615Q920 596 950 585Z"/>
+        <path fill="#768a32" d="M891 717C899 747 910 784 903 807Q884 834 841 844L825 846C863 828 884 807 882 781L881 744Z"/>
+        <path fill="#798a31" d="M904 741Q961 756 1002 733Q980 763 904 751Z"/>
+        <path class="ink" fill="none" d="M956 670Q934 651 912 654M891 714q8 22 12 38m4-27-4 21"/>
+        <path class="fine" d="M933 656q10-5 19 1m-67-5 14-15"/>
+      </g>
+      <!-- Head: complete rear hair, ears, face, eyes, then front locks. -->
+      <g id="head">
+        <g id="hairpin">
+          <path class="ink" fill="#943a38" fill-rule="evenodd" d="M1080 424L1108 413Q1110 396 1118 402L1130 409C1137 381 1138 363 1148 353Q1154 348 1166 356L1184 368Q1190 349 1202 359L1218 369L1215 393Q1215 405 1193 397L1186 433L1196 442Q1192 460 1179 478L1158 497L1158 438L1133 430Q1125 447 1116 435L1081 449ZM1152 386Q1163 379 1173 391Q1179 400 1176 414Q1160 417 1147 409Z"/>
+          <path fill="#7b282b" d="m1165 420 8 1 6 57-20 17 4-54-29-11 3-10Z"/>
+          <path class="fine" d="m1164 420 7 62m6-61 7 21-12 12m-37-35 20 10 28 13"/>
+        </g>
+        <g id="back-locks">
+          <path class="ink" fill="#eab0b5" d="M1051 540C1085 550 1116 583 1110 638C1097 612 1081 596 1065 579C1082 613 1084 638 1064 654C1070 630 1053 596 1048 571Z"/>
+          <path fill="#cc8c98" d="M1057 553C1082 568 1093 594 1097 612C1084 596 1066 579 1051 571Z"/>
+          <path class="ink" fill="url(#hair-tone)" d="M1059 436C1090 436 1116 455 1126 487C1138 523 1113 550 1075 556L1043 537Z"/>
+          <path class="fine" d="M1071 447C1094 451 1107 472 1111 491Q1120 530 1080 546M1086 513q8 7 18 10M1074 529l24 5"/>
+        </g>
+        <g id="ear-left">
+          <path id="ear-left-outline" class="ink" fill="#ffebc1" d="M731 233C720 187 738 107 771 72C782 103 822 172 850 241L787 273Z"/>
+          <path fill="#fff7dc" d="M744 198C746 159 753 119 768 103C778 137 783 169 782 208Z"/>
+          <path id="ear-left-tuft" class="ink" fill="#fff8dc" d="M781 249C759 254 737 267 719 283Q695 273 716 263C700 256 692 239 707 228Q720 219 738 223L739 204C740 185 761 195 782 208Z"/>
+          <path fill="#dfbda6" d="M702 238Q726 242 730 251Q732 259 741 261L719 278Q705 273 718 264Q702 256 702 238Z"/>
+          <path class="ink" fill="none" d="M778 128Q786 191 781 249"/>
+        </g>
+        <path id="hair-back-main" class="ink" fill="url(#hair-tone)" d="M780 250C726 264 679 309 645 363C620 404 603 424 578 440Q607 456 650 444C635 480 625 499 602 510Q620 522 657 520L658 559C695 548 721 529 738 504L919 543Q962 571 992 608L1001 589C1005 609 1017 631 1030 643C1035 603 1048 574 1059 552C1075 515 1088 476 1086 434C1084 394 1076 363 1061 341L1014 267C955 253 897 229 839 240"/>
+        <!-- Skin extends under all hair layers to prevent gaps during motion. -->
+        <g id="face">
+          <path class="ink" fill="url(#face-light)" d="M750 330C790 307 859 336 914 376L966 433C966 482 950 531 912 556C870 558 824 541 779 521C748 508 720 492 712 480Q700 467 717 453L730 392Z"/>
+          <path fill="#ffb7b2" d="M733 382Q765 320 817 285Q799 333 792 400Z"/>
+          <path fill="#ffdbcc" d="M753 390L789 331L779 394Z"/>
+          <path fill="#ffb7b2" d="M869 439Q907 391 915 309C923 366 940 419 959 455Z"/>
+          <path fill="#ffdbcc" d="M892 442Q909 411 916 374L945 457Z"/>
+          <g id="blushes"><ellipse cx="730" cy="477" rx="35" ry="22" fill="url(#blush)" transform="rotate(20 730 477)"/><ellipse cx="901" cy="535" rx="40" ry="23" fill="url(#blush)" transform="rotate(20 901 535)"/></g>
+          <g id="eye-left" transform="translate(773 397) rotate(20)">
+            <g id="eye-left-open" clip-path="url(#eye-aperture-left)">
+              <path fill="url(#eye-white)" d="M-36 0Q0-4 36 1L36 39Q31 73 8 76Q-25 80-30 52Z"/>
+              <g clip-path="url(#eye-clip)"><g id="iris-left"><path fill="#be326e" stroke="#681c28" stroke-width="5.8" d="M-8-6L38-3L36 39C33 65 18 75 2 74C-21 73-22 54-20 39Q-17 12-8-6Z"/><path fill="#9f285b" d="M-6 1L35 1L35 15Q13 8-12 14Z"/><ellipse cx="32" cy="42" rx="10" ry="12" fill="#fff"/></g></g>
+            </g>
+            <path id="lid-left" d="M-39-1Q0 1 39 1" fill="none" stroke="#64191e" stroke-width="10" stroke-linecap="round"/>
+            <path id="lashes-left" d="M-37-2L-41-11M-23-3L-26-10M35 0L36-13" fill="none" stroke="#64191e" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <g id="eye-right" transform="translate(913 447) rotate(20)">
+            <g id="eye-right-open" clip-path="url(#eye-aperture-right)">
+              <path fill="url(#eye-white)" d="M-36 0Q0-4 36 1L36 39Q31 73 8 76Q-25 80-30 52Z"/>
+              <g clip-path="url(#eye-clip)"><g id="iris-right"><path fill="#be326e" stroke="#681c28" stroke-width="5.8" d="M-8-6L38-3L36 39C33 65 18 75 2 74C-21 73-22 54-20 39Q-17 12-8-6Z"/><path fill="#9f285b" d="M-6 1L35 1L35 15Q13 8-12 14Z"/><ellipse cx="32" cy="42" rx="10" ry="12" fill="#fff"/></g></g>
+            </g>
+            <path id="lid-right" d="M-39-1Q0 1 39 1" fill="none" stroke="#64191e" stroke-width="10" stroke-linecap="round"/>
+            <path id="lashes-right" d="M-36-1L-40-8M-21-2L-25-9M36 0L36-11" fill="none" stroke="#64191e" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <g stroke="#f29a98" stroke-width="2.2" stroke-linecap="round"><path d="m719 479 8-3m0 8 8-4m155 53 9-4m-1 9 9-4m-1 8 9-3"/></g>
+          <g fill="#fff"><ellipse cx="724" cy="468" rx="5" ry="3.5" transform="rotate(20 724 468)"/><ellipse cx="910" cy="528" rx="5" ry="3.5" transform="rotate(20 910 528)"/></g>
+        </g>
+        <!-- Choker sits beneath the chin and overlaps the sailor collar. -->
+        <g id="choker">
+          <path class="ink" fill="#8e3b61" d="M745 507C798 540 852 552 914 555L906 567C851 580 783 555 755 536Z"/>
+          <path fill="#b7c9d0" stroke="#681f25" stroke-width="4" d="m775 525 13 6-7 17-11-5Z m51 20 12 3-4 17-12-1Z"/>
+        </g>
+        <g id="bell" transform="translate(791 574) rotate(18)">
+          <path fill="#decf35" stroke="#641d23" stroke-width="5" d="M-16-25Q-10-39 8-34Q21-31 22-19"/>
+          <ellipse class="ink" cx="0" cy="0" rx="28" ry="30" fill="#e6e742"/>
+          <path d="M-24-11Q0-18 24-9" fill="none" stroke="#6c2824" stroke-width="7" stroke-linecap="round"/>
+          <path d="M-3 1V27" fill="none" stroke="#6c2824" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="-3" cy="-1" r="7" fill="#6c2824"/>
+          <path d="M-19 3Q-23 12-17 19" fill="none" stroke="#f9f7a0" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <!-- Main fringe. The two open triangular areas reveal the face. -->
+        <path fill="url(#hair-tone)" d="M748 292C779 258 812 244 850 243L931 256L988 292L980 361C977 397 971 428 957 451C938 419 922 366 915 309C912 377 899 433 868 465C847 456 824 426 813 391L810 410L791 398C789 351 797 312 816 285C787 304 755 335 734 379L739 331Z"/>
+        <path class="ink" fill="none" d="M734 379C755 335 787 304 816 285C797 312 789 351 791 398M813 391C824 426 847 456 868 465C899 433 912 377 915 309C922 366 938 419 957 451"/>
+        <path id="fringe-shine" fill="#fffdf4"/>
+        <path class="fine" d="M888 394Q924 388 970 431"/>
+        <!-- Left framing lock; its white rim is also a vector path. -->
+        <g id="left-lock">
+          <use href="#left-lock-contour" fill="url(#hair-tone)"/>
+          <use href="#left-lock-contour" class="ink" fill="none"/>
+          <path id="left-lock-shine" fill="#fffef5"/>
+          <path fill="#fff" d="M681 335C696 313 713 301 722 302C752 304 725 336 709 352C694 370 670 363 681 335Z"/>
+          <ellipse cx="734" cy="350" rx="5" ry="7" transform="rotate(25 734 350)" fill="#fffdf6"/>
+        </g>
+        <!-- Shine on the central fringe. -->
+        <path fill="#fff" d="M800 350C809 338 825 340 826 352Q829 370 812 382L794 369Z"/>
+        <path class="fine" d="M744 343Q785 343 820 374"/>
+        <!-- The long front lock has separate fill and outline paths for deformation. -->
+        <g id="right-lock">
+          <path id="lock-fill" fill="url(#hair-tone)" d="M980 361C975 421 959 489 936 521L917 533L941 527C912 557 895 584 908 614C915 629 923 637 913 650Q932 654 929 639C929 623 945 612 964 599C1014 564 1040 489 1048 415L1044 361Z"/>
+          <path id="lock-edge" class="ink" fill="none" d="M980 361C975 421 959 489 936 521L917 533L941 527C912 557 895 584 908 614C915 629 923 637 913 650Q932 654 929 639C929 623 945 612 964 599C1014 564 1040 489 1048 415"/>
+          <path id="lock-shine" fill="#fffdf4"/>
+          <ellipse cx="1013" cy="432" rx="19" ry="32" fill="#fff"/>
+          <ellipse cx="978" cy="424" rx="3.5" ry="7" fill="#fffef4"/>
+        </g>
+        <path class="ink" fill="none" d="M1042 456Q1065 465 1086 467M1027 489Q1053 500 1073 493M1014 525Q1040 535 1061 526"/>
+        <path class="ink" fill="none" d="M839 240Q885 232 931 249"/>
+        <g id="ear-right">
+          <path id="ear-right-outline" fill="#ffebc1" d="M943 246C947 199 975 139 1010 114C1026 175 1052 265 1062 341L1006 361L949 310Z"/>
+          <path class="ink" fill="none" d="M943 246C947 199 975 139 1010 114C1026 175 1052 265 1062 341"/>
+          <path fill="#fff6d9" d="M955 242C962 202 981 160 999 145C1012 180 1013 219 1012 260L977 247Z"/>
+          <path id="ear-right-tuft" class="ink" fill="#fff8dc" d="M1009 258C994 243 979 225 973 233L968 249C952 241 937 235 933 247Q928 264 943 287C937 299 923 311 932 317Q946 323 974 322Q979 338 1006 330C1011 308 1012 280 1009 258Z"/>
+          <path fill="#dfbca5" d="M936 264Q949 275 945 286L938 303Q955 306 974 302C983 300 980 315 995 314L1008 311L1005 327Q980 335 977 318Q948 321 932 313L943 287Z"/>
+          <path class="ink" fill="none" d="M1010 182Q1015 264 1006 329"/>
+        </g>
+        <!-- The crown excludes the face; eyes and ears have independent hit areas above it. -->
+        <path id="head-hit" class="character-hit" d="M645 363C679 309 726 264 780 250L839 240Q885 232 931 249L1014 267C1040 302 1071 360 1086 434L1086 467Z" fill="transparent" role="button" tabindex="0" aria-label="按住头顶下压，松开复原"/>
+        <g transform="translate(773 397) rotate(20)">
+          <path id="eye-left-hit" class="character-hit" d="M-39-7Q0-8 39-5L39 39Q34 77 8 80Q-29 84-34 53Z" fill="transparent" role="button" tabindex="0" aria-label="左眼快速眨眼"/>
+        </g>
+        <g transform="translate(913 447) rotate(20)">
+          <path id="eye-right-hit" class="character-hit" d="M-39-7Q0-8 39-5L39 39Q34 77 8 80Q-29 84-34 53Z" fill="transparent" role="button" tabindex="0" aria-label="右眼快速眨眼"/>
+        </g>
+        <g id="ear-left-hit" class="character-hit" opacity="0" role="button" tabindex="0" aria-label="左耳快速抖动">
+          <use href="#ear-left-outline"/>
+          <use href="#ear-left-tuft"/>
+        </g>
+        <g id="ear-right-hit" class="character-hit" opacity="0" role="button" tabindex="0" aria-label="右耳快速抖动">
+          <use href="#ear-right-outline"/>
+          <use href="#ear-right-tuft"/>
+        </g>
+      </g>
+
+    </svg>
+  </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
